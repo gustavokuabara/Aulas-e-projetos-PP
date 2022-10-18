@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x;
+    float y, z;
+    printf("Digite quantas horas por mes de trabalho foram exercidas: \n");
+    scanf("%d",&x);
+    printf("Digite o salario por hora do profissional: \n");
+    scanf("%f",&y);
+    z = x * y;
+    z = z * 1.10;
+    printf("Salario total com bonificacao de 10 por cento: %.2f",z);
+    return 0;
+}

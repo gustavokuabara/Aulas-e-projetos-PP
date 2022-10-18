@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, z, y;
+    printf("Digite o valor em real e logo em seguida a cotacao do dolar: \n");
+    scanf("%f %f",&x, &y);
+    z = x * y;
+    printf("O valor digitado em dolar e igual a: %.3f",z);
+    return 0;
+}

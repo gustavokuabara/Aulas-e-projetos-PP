@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x, y ,c;
+    float z;
+    printf("Digite um numero inteiro positivo de 3 digitos: \n");
+    scanf("%d",&x);
+    while(x < 100 || x > 999){
+        printf("Digite um numero inteiro positivo de 3 digitos \n");
+        scanf("%d",&x);
+    }
+    y = x/100;
+    z = x/10 - (y * 10);
+    c = x - ((y * 100 + z * 10));
+    printf("Numero invertido: %d%.0f%d",c,z,y);
+    return 0;
+}

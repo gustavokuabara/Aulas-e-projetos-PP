@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, quinto;
+    printf("Digite um valor real: ");
+    scanf("%f",&x);
+    quinto = x/5;
+    printf("\nQuinto do valor digitado: %f",quinto);
+    return 0;
+}

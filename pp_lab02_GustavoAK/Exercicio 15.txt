@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, y;
+    printf("Digite um angulo em radianos: ");
+    scanf("%f",&x);
+    y = x * (180/3.141592);
+    printf("\nO angulo convertido em graus é: %f",y);
+    return 0;
+}

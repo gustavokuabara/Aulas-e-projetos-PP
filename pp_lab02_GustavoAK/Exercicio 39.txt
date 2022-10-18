@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y, z;
+    printf("Por decisao os ganhadores do concurso ganharao a seguinte quantia: \n");
+    x = 780000.00 * 0.46;
+    y = 780000.00 * 0.32;
+    z = 780000.00 * 0.22;
+    printf("Primeito lugar: %.2f\n",x);
+    printf("Segundo lugar: %.2f\n",y);
+    printf("Terceiro lugar: %.2f\n",z);
+    return 0;
+}

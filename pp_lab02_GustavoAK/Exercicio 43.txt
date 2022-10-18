@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y, z, c, v;
+    printf("Digite o valor de um produto: \n");
+    scanf("%f",&x);
+    y = x * 0.90;
+    printf("Valor com desconto de 10 por cento: %.2f\n",y);
+    z = x/3.0;
+    printf("Valor da parcela em 3 vezes sem juros: %.2f\n",z);
+    c = y * 0.05;
+    v = x * 0.05;
+    printf("Comissao do vendedor caso seja a vista,ou seja, com desconto de 10 por cento: %.2f\n",c);
+    printf("Comissao do vendedor caso seja parcelado: %.2f\n",v);
+    return 0;
+}

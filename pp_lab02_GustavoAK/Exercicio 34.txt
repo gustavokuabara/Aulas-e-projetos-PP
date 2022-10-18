@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, y;
+    printf("Digite o tamanho do raio de um circulo qualquer: \n");
+    scanf("%f",&x);
+    y = (x * x) * 3.141592;
+    printf("Area do circulo: %.2f",y);
+
+    return 0;
+}

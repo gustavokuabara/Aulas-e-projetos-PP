@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, y;
+    printf("Digite um valor em centimetros: ");
+    scanf("%f",&x);
+    y = x / 2.54;
+    printf("\nO valor convertido em polegadas é: %f", y);
+    return 0;
+}

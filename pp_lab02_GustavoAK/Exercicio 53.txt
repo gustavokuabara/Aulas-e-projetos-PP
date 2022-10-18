@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y, z, c;
+    printf("Digite o comprimento do terreno: \n");
+    scanf("%f",&x);
+    printf("Digite a largura do terreno: \n");
+    scanf("%f",&y);
+    printf("Digite o valor por metro de tela: \n");
+    scanf("%f",&z);
+    c = ((2 * x) + (2 * y)) * z;
+    printf("Valor a pagar para cercar o terreno: %.2f",c);
+    return 0;
+}

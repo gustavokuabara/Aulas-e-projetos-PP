@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, z;
+    printf("Digite um valor em quilogramas: \n");
+    scanf("%f",&x);
+    z = x / 0.45;
+    printf("O valor convertido em libras: %.1f",z);
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    char x, y;
+    int z;
+    printf("Digite uma letra maiscula: \n");
+    scanf("%c",&x);
+    z = x;
+    z = z + 32;
+    y = z;
+    printf("Letra convertida: %c",y);
+    return 0;
+}

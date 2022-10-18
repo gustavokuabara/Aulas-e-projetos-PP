@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y;
+    printf("Digite o salario base de um funcionario: \n");
+    scanf("%f",&x);
+    x = x * 1.05;
+    y = x * 0.93;
+    printf("Salario real: %.2f",y);
+    return 0;
+}

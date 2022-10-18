@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y;
+    printf("Digite o valor do produto: \n");
+    scanf("%f",&x);
+    y = x * 0.88;
+    printf("Produto com desconto: %.2f",y);
+
+    return 0;
+}

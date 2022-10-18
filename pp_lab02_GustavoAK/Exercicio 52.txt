@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y, z;
+    printf("Valor investido do primeiro amigo: \n");
+    scanf("%f",&x);
+    printf("Valor investido do segundo amigo: \n");
+    scanf("%f",&y);
+    printf("Valor investido do terceiro amigo: \n");
+    scanf("%f",&z);
+    printf("Valor do premio: \n");
+    scanf("%f",&c);
+    v = x + y + z;
+    x = v /x;
+    y = v / y;
+    z = v / z;
+    x = c / x;
+    y = c / y;
+    z = c / z;
+    printf("Valor que o primeiro ganhara: %.2f\n",x);
+    printf("Valor que o segundo ganhara: %.2f\n",y);
+    printf("Valor que o terceiro ganhara: %.2f\n",z);
+    return 0;
+}

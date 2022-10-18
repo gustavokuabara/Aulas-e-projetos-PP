@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, y;
+    printf("Digite uma distancia em quilometros: ");
+    scanf("%d",&x);
+    y = x / 1.61;
+    printf("\nA distancia convertida em milhas é: %d",y);
+    return 0;
+}

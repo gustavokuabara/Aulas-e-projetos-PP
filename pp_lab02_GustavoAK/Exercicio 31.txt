@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, z, y;
+    printf("Digite um numero inteiro: \n");
+    scanf("%d",&x);
+    y = x - 1;
+    z = x + 1;
+    printf("O antecessor do numero digitado: %d\n",y);
+    printf("O sucessor do numero digitado: %d", z);
+    return 0;
+}

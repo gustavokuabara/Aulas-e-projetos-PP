@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, y;
+    printf("Digite uma velocidade em km/h: ");
+    scanf("%d",&x);
+    y = x/3.6;
+    printf("\nA velocidade convertida em m/s é: %dm/s",y);
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, z;
+    printf("Digite um valor em metros: \n");
+    scanf("%f",&x);
+    z = x / 0.91;
+    printf("O valor convertido em jardas: %.1f",z);
+    return 0;
+}

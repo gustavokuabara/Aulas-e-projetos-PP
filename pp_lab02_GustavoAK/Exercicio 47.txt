@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x, y ,c, z, t;
+    printf("Digite um numero inteiro positivo de 4 digitos: \n");
+    scanf("%d",&x);
+    while(x < 1000 || x > 9999){
+        printf("Digite um numero inteiro positivo de 3 digitos \n");
+        scanf("%d",&x);
+    }
+    y = x/1000;
+    c = (x - y *1000)/100;
+    z = (x - (y * 1000+ c * 100))/10;
+    t = (x - (y * 1000 + c * 100+ z * 10));
+    printf("Numero desmontado:\n%d\n%d\n%d\n%d",y,c,z,t);
+    return 0;
+}

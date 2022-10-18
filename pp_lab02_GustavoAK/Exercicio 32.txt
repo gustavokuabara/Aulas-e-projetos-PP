@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x, z, y, soma;
+    printf("Digite um numero inteiro: \n");
+    scanf("%d",&x);
+    y = x - 1;
+    z = x + 1;
+    soma = (3 * z) + (2 * y);
+    printf("A soma do triplo do sucessor junto ao dobro do antecessor do numero digitado e: %d",soma);
+
+    return 0;
+}

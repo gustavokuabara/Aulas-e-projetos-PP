@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, z, y, t, soma;
+    printf("Digite quatro notas: \n");
+    scanf("%f %f %f %f",&x, &y, &z, &t);
+    soma = (x + y + z + t)/4;
+    printf("A media aritmetica das quatro notas: %.1f",soma);
+    return 0;
+}

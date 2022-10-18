@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x;
+    float y;
+    printf("Digite quantos dias de trabalho o encanador teve: \n");
+    scanf("%d",&x);
+    y = x * 30.0;
+    y = y * 0.92;
+    printf("Salario do encanador no total de %d dias: %.2f",x,y);
+    return 0;
+}

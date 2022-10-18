@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y, z;
+    printf("Digite em ordem o raio e altura de um cilindro circular qualquer: \n");
+    scanf("%f %f",&x, &y);
+    z = 3.141592 * (x * x) * y;
+    printf("Area do cilindro: %.2f",z);
+
+    return 0;
+}

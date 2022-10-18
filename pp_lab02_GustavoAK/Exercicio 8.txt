@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float cel, kel;
+    printf("Digite uma temperatura em kelvin para conversao em celsius: ");
+    scanf("%f",&kel);
+    cel = kel - 273.15
+    printf("\nValor convertido em celsius: %1.f",cel);
+    return 0;
+}
