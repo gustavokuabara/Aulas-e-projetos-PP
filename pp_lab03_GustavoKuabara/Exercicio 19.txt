@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x,y;
+    printf("Digite um numero inteiro: \n");
+    scanf("%d",&x);
+    if(x % 3 == 0 && x % 5 == 0){
+       system("pause");
+       return 0;
+    }else{
+        if(x % 3 == 0){
+            printf("Numero divisivel por 3\n");
+        }
+        if(x % 5 == 0){
+            printf("Numero divisivel por 5\n");
+        }
+        if(x % 3 != 0 && x % 5 != 0){
+            printf("Numero nao divisivel por 3 ou por 5\n");
+        }
+    }
+    system("pause");
+    return 0;
+}

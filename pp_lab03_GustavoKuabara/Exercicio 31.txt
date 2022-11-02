@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    float x, y ,z;
+    
+    printf("Digite respectivamente altura e peso de uma pessoa: \n");
+    scanf("%f %f",&x,&y);
+    printf("Classificacao: ");
+    if(y < 60){
+        if(x < 1.20){
+            printf("A\n");
+        }
+        if(x >= 1.20 &&  x <= 1.70){
+            printf("B\n");
+        }
+        if(x > 1.70){
+            printf("C\n");
+        }
+    }
+    if(y >= 60 && y <= 90){
+        if(x < 1.20){
+            printf("D\n");
+        }
+        if(x >= 1.20 &&  x <= 1.70){
+            printf("E\n");
+        }
+        if(x > 1.70){
+            printf("F\n");
+        }
+    }
+    if(y > 90){
+        if(x < 1.20){
+            printf("G\n");
+        }
+        if(x >= 1.20 &&  x <= 1.70){
+            printf("H\n");
+        }
+        if(x > 1.70){
+            printf("I\n");
+        }
+    }
+
+    system("pause");
+    return 0;
+}

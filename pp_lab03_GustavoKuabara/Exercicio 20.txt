@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x,y,z;
+    printf("Digite os valores dos lados de um triangulo: \n");
+    scanf("%d %d %d",&x,&y,&z);
+    if(x + y < z || x + z < y || y + z < x){
+       printf("Valores digitados invalidos\n");
+       system("pause");
+       return 0;
+    }else{
+        if(x == y && x == z){
+            printf("Eh um triangulo equilatero\n");
+            system("pause");
+            return 0;
+        }
+        if(x == y || x == z || z == y){
+            printf("Eh um triangulo isoceles\n");
+            system("pause");
+            return 0;
+        }
+        printf("Eh um triangulo escaleno\\n");
+    }
+    system("pause");
+    return 0;
+}

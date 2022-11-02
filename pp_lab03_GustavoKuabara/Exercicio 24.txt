@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x;
+    char y;
+    printf("Digite o preço do produto: \n");
+    scanf("%f",&x);
+    fflush(stdin);
+    printf("Digite o estado no qual o produto vai: \n");
+    printf("Opcoes: Minas Gerais(M)\nSao Paulo(S)\nRio de Janeiro(R)\nMato Grosso do Sul(G)\n");
+    scanf("%c",&y);
+
+    if(y != 'M' && y != 'S' && y && 'R' && y != 'G'){
+        printf("Estado digitado invalido!\n");
+    }else{    
+       if(y == 'M'){
+           x = x * 1.07;
+           printf("Preco final do produto: %.2f\n",x);
+       }
+       if(y == 'S'){
+           x = x * 1.12;
+           printf("Preco final do produto: %.2f\n",x);
+       }
+       if(y == 'R'){
+           x = x * 1.15;
+           printf("Preco final do produto: %.2f\n",x);
+       }
+       if(y == 'G'){
+           x = x * 1.08;
+           printf("Preco final do produto: %.2f\n",x);
+       }
+    }
+
+    system("pause");
+    return 0;
+}

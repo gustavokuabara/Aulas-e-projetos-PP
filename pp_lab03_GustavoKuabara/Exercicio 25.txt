@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x,y,z, delta;
+    float x1,x2;
+    
+    printf("Programa de resolucao de equacoes de segundo gral:\n");
+    printf("Digite a constante que segue junto ao x quadrado :\n");
+    scanf("%d",&x);
+    fflush(stdin);
+    if(x == 0){
+        printf("Nao eh equacao de segundo gral\n");
+        system("pause");
+        return 0;
+    }
+    printf("Digite a constante que segue junto ao x:\n");
+    scanf("%d",&y);
+    fflush(stdin);
+    printf("Digite a constante final da equacao: \n");
+    scanf("%d",&z);
+    delta = (y * y) - (4 * x * z);
+
+    if(delta < 0){
+        printf("Nao existe raiz\n");
+    }else{
+        if(delta == 0){
+            printf("Raiz unica:");
+            x1 = (((y * -1) + sqrt(delta))/ (2 * x));
+            printf(" %.2f\n",x1);
+        }
+        if(delta > 0){
+            x1 = (((y * -1) - sqrt(delta))/ (2 * x));
+            x2 = (((y * -1) + sqrt(delta))/ (2 * x));
+            printf("Primeira raiz: %.2f\n",x1);
+            printf("Segunda raiz: %.2f\n",x2);
+        }
+    }
+    system("pause");
+    return 0;
+}   

@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x,y;
+    printf("Digite um ano para saber se eh bissexto: \n");
+    scanf("%d",&x);
+
+    if(x % 4 == 0 && x % 100 != 0){
+        printf("O ano digitado eh bissexto\n");
+    }else{
+        printf("O ano digitado nao eh bissexto\n");
+    }
+    
+    system("pause");
+    return 0;
+}

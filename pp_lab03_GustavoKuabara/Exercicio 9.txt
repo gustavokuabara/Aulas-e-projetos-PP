@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y;
+    printf("Digite o salario de um funcionario e a prestacao de um emprestimo desejado:\n");
+    scanf("%f %f",&x,&y);
+    if((y / x) >= 0.2){
+        printf("Emprestimo nao concedido\n");
+    } else{
+        printf("Emprestimo concedido\n");
+    }
+    system("pause");
+    return 0;
+}

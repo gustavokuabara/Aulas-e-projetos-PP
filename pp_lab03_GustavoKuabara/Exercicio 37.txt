@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    int x, y, i ,j, c, v;
+    
+    printf("Digite as horas e minutos de chegada: \n");
+    scanf("%d %d",&x,&y);
+    printf("Digite as horas e minutos de partida: \n");
+    scanf("%d %d",&i,&j);
+    if(x <= 0 || x > 24 || y <= 0 || y > 60 || i <= 0 || i > 24 || y <= 0 || y > 60){
+        printf("Horario digitado invalido!\n");
+        system("pause");
+        return 0;
+    }else{
+        printf("Valor a ser pago em reais: \n");
+        if(x <= i){
+            c = i - x;
+            if(j >= y){
+                v = j - y;
+            }else{
+                v = (j + 60) - i;
+                c = c + 1;
+            }
+        }
+        if(x > i){  
+           printf("A partida ocorreu 24h depois da chegada!\n");
+        }
+    }
+
+    if(c >= 0 && c < 3){
+        if(v >= 0 && v < 30){   
+            printf("1.00\n");
+        }else{
+            printf("1.40\n");
+        }
+    }
+    if(c >= 3 && c < 5){
+        if(v >= 0 && v < 30){
+            printf("1.40\n");
+        }else{
+            printf("2.00\n");
+        }
+    }
+    if(c > 5){
+        printf("2.00\n");
+    }
+
+    system("pause");
+    return 0;
+}

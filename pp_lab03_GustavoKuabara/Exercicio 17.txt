@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x,y,z,c;
+    printf("Digite respectivamente a medida da base maior,base menor e altura de um trapesio:\n");
+    scanf("%f %f %F",&x,&y,&z);
+    c = ((x + y)*z)/2;
+    if(x > 0 && y > 0 && z > 0){
+        printf("Area do trapezio: %.2f\n",c);
+    }
+    system("pause");
+    return 0;
+}

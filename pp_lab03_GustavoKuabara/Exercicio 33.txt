@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    float x, y;
+    
+    printf("Digite o preco do produto: \n");
+    scanf("%f",&x);
+
+    if(x < 50){
+        y = x * 1.05;
+        printf("Preco novo: %.2f\n",y);
+    }
+    if(x >= 50 && x <= 100){
+        y = x * 1.10;
+        printf("Preco novo: %.2f\n",y);
+    }
+        if(x > 100){
+        y = x * 1.15;
+        printf("Preco novo: %.2f\n",y);
+    }
+
+    if(y < 80){
+        printf("Barato\n"); 
+    }
+    if(y >= 80 && y <= 120){
+        printf("Normal\n"); 
+    }
+    if(y >= 120 && y <= 200){
+        printf("Caro\n"); 
+    }
+    if(y > 200){
+        printf("Muito Caro\n"); 
+    }
+    system("pause");
+    return 0;
+}

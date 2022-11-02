@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x;
+    float y,z;
+    printf("Operaçoes basicas:\n1-Adiçao\n2-Subtraçao\n3-Multiplicaçao\n4-Divisao\n");
+    scanf("%d",&x);
+    switch(x){
+       case 1:
+       printf("Digite dois valores: \n");
+       scanf("%f %f",&y,&z);
+       y = y + z;
+       printf("Adiçao: %.2f\n",y);
+       break;
+       case 2:
+       printf("Digite dois valores: \n");
+       scanf("%d %d",&y,&z);
+       y = y - z;
+       printf("Subtraçao: %.2f\n",y); 
+       break;
+       case 3:
+       printf("Digite dois valores: \n");
+       scanf("%d %d",&y,&z);
+       y = y * z;
+       printf("Multiplicaçao: %.2f\n",y);
+       break;
+       case 4:
+       printf("Digite dois valores: \n");
+       scanf("%d %d",&y,&z);
+       y = y / z;
+       printf("Divisao: %.2f\n",y);
+       break;
+    }
+    system("pause");
+    return 0;
+}

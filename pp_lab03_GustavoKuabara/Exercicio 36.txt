@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    float x, y;
+    
+    printf("Digite o valor da venda mensal de um funcionario: \n");
+    scanf("%f",&x);
+    printf("Comissao: ");
+    if(x >= 100000.00){
+        y = 700 + (1.16 * x);
+        printf("%.2fR$\n",y);
+    }
+    if(x < 100000.00 && x >= 80000.00){
+        y = 650 + (1.14 * x);
+        printf("%.2fR$\n",y);
+    }
+    if(x < 80000.00 && x >= 60000.00){
+        y = 600 + (1.14 * x);
+        printf("%.2fR$\n",y);
+    }
+    if(x < 60000.00 && x >= 40000.00){
+        y = 550 + (1.14 * x);
+        printf("%.2fR$\n",y);
+    }
+    if(x < 40000.00 && x >= 20000.00){
+        y = 500 + (1.14 * x);
+        printf("%.2fR$\n",y);
+    }
+    if(x < 20000.00 && x >= 0.00){
+        y = 400 + (1.14 * x);
+        printf("%.2fR$\n",y);
+    }
+    if(x < 0){
+        printf("Valor digitado eh invalido!");
+    }
+    system("pause");
+    return 0;
+}

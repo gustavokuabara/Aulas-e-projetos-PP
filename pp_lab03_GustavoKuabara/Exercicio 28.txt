@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    int x, y ,z, c;
+    float v;
+
+    printf("Digite tres numeros inteiros positivos: \n");
+    if(x <= 0 || y <= 0 || z <= 0){
+        printf("Algum valor digitado eh invalido\n");
+        return 0;
+    }
+    scanf("%d %d %d",&x,&y,&z);
+    fflush(stdin);
+    printf("Escolha uma opçao: \n");
+    printf("1-Geometrica\n");
+    printf("2-Ponderada\n");
+    printf("3-Harmonica\n");
+    printf("4-Aritmetica\n");
+    scanf("%d",&c);
+
+    switch(c){
+        case 1:
+        v = cbrt(x * y * z);
+        printf("Resultado: %.2f\n",v);
+        break;
+        case 2:
+        v = ((1 * x)+(2 * y)+(3 * z))/3;
+        printf("Resultado: %.2f\n",v);
+        break;
+        case 3:
+        v = 1/((1/x)+(1/y)+(1/z));
+        printf("Resultado: %.2f\n",v);
+        break;
+        case 4:
+        v = (x + y +z)/3;
+        printf("Resultado: %.2f\n",v);
+        break;
+    }
+    system("pause");
+    return 0;
+}   

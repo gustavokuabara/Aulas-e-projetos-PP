@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y, z;
+    printf("Digite duas notas de um aluno:\n");
+    scanf("%f %f",&x,&y);
+    if(x < 0 || x > 10 || y < 0 || y > 10){
+        printf("Uma das notas digitadas e invalida,ou seja, nao esta entre 0 e 10\n",y);
+    } else{
+        z = (x + y)/2;
+        printf("Media das notas: %.2f\n",z);
+    }
+    system("pause");
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x,y,z,t;
+
+    printf("Digite as notas respectivamente do trabalho de laboratorio, avaliaçao semestral e exame final(valores de 0 a 10): \n");
+    scanf("%f %f %f",&x,&y,&z);
+    t = ((2 * x) + (y * 3) + (z * 5))/10;
+    if(x < 0 || x > 10.0 || y < 0.0 || y > 10.0 || z < 0.0 || z > 10.0){
+        printf("Alguma(s) das notas digitadas eh invalida\n");
+    }else{
+       if(t >= 0 && t < 3.0){
+          printf("Aluno reprovado!\n");
+       }
+       if(t < 5.0 && t >= 3.0){
+          printf("Aluno de recuperaçao!\n");
+       }
+       if(t <= 10.0 && t >= 6.0){
+        printf("Aluno aprovado!\n");
+       }
+    }
+    system("pause");
+    return 0;
+}

@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    int x, y;
+    float z;
+    
+    printf("Informacoes do produto: \n");
+    printf("Produto/codigo/preco\n");
+    printf("Cachorro Quente /100 /1,20\n");
+    printf("Bauru Simples /101 /1,30\n");
+    printf("Bauru com Ovo /102 /1,50\n");
+    printf("Hambúrguer /103 /1,20\n");
+    printf("Cheeseburguer /104 /1,70\n");
+    printf("Suco /105 /2,20\n");
+    printf("Refrigerante /106 /1,00\n");
+    printf("Digite respectivamente o codigo do produto e quantidade: \n");
+    scanf("%d %d",&x,&y);
+    if(x < 100 || x > 106){
+        printf("Codigo invalido\n");
+        system("pause");
+        return 0;
+    }else{
+        if(x == 100 || x == 103){
+            z = y * 1.20;
+            printf("Valor: %.2f\n",z);
+        }
+        if(x == 101){
+            z = y * 1.30;
+            printf("Valor: %.2f\n",z);
+        }
+        if(x == 104){
+            z = y * 1.70;
+            printf("Valor: %.2f\n",z);
+        }
+        if(x == 105){
+            z = y * 2.20;
+            printf("Valor: %.2f\n",z);
+        }
+        if(x == 106){
+            z = y * 1.00;
+            printf("Valor: %.2f\n",z);
+        }
+    }
+
+    system("pause");
+    return 0;
+}

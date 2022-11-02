@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x, y;
+    printf("Digite um valor inteiro: \n");
+    scanf("%d",&x);
+    if(x % 2 == 0){
+        printf("Numero digitado e par\n");
+    } else {
+        printf("Numero digitado e impar\n");
+    }
+    system("pause");
+    return 0;
+}

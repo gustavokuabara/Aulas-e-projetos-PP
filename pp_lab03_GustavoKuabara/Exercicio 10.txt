@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, z;
+    char y;
+    printf("Digite a altura e o sexo(h = homem,m = mulher) da pessoa:\n");
+    scanf("%f %c",&x,&y);
+    if(y == 'h'){
+        z = (72.7 * x) - 58.0;
+        printf("Peso ideal: %.2f\n",z);
+    }
+    if(y == 'm'){
+        z = (62.1 * x) - 44.7;
+        printf("Peso ideal: %.2f\n",z);
+    }
+    system("pause");
+    return 0;
+}

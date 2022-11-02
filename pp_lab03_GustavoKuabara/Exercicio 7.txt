@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float x, y;
+    printf("Digite dois valores: \n");
+    scanf("%f %f",&x,&y);
+    if(x < y){
+        printf("%f eh maior\n",y);
+    }
+    if(x > y){
+        printf("%f eh maior\n",x);
+    }
+    if(x == y){
+        printf("Numeros iguais\n");
+    }
+    system("pause");
+    return 0;
+}

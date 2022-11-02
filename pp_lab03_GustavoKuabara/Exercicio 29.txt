@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+
+int main()
+{   
+    int x, y ,z, c, d, i=0, u ,j, k;
+    
+    srand(time(NULL));
+    x = rand() % 100;
+    y = rand() % 100;
+    printf("Qual eh o resultado da soma de %d e %d: \n",x,y);
+    scanf("%d",&c);
+    z = x + y;
+
+    if(c == z){
+        printf("Voce acertou\n");
+    }else{
+        printf("Voce errou\n");
+    }
+
+    printf("Quanto eh 1 + 1: \n");
+    scanf("%d",&u);
+    printf("Quanto eh 10 + 23: \n");
+    scanf("%d",&j);
+    printf("Quanto eh 29 + 32: \n");
+    scanf("%d",&k);
+    printf("Quanto eh 0 + 22: \n");
+    scanf("%d",&c);
+    printf("Quanto eh 100 + 100: \n");
+    scanf("%d",&d);
+    if(u == 2){
+        i = i + 1;
+    }
+    if(j == 33){
+        i = i + 1;
+    }
+    if(k == 61){
+        i = i + 1;
+    }
+    if(c == 22){
+        i = i + 1;
+    }
+    if(d == 200){
+        i = i + 1;
+    }
+    printf("---Resultados---\n");
+    printf("Quanto eh 1 + 1: 2\n");
+    printf("Quanto eh 10 + 23: 33\n");
+    printf("Quanto eh 29 + 32: 61\n");
+    printf("Quanto eh 0 + 22: 22\n");
+    printf("Quanto eh 100 + 100: 200\n");
+    printf("---Acertos---\n");
+    printf("%d\n",i);
+    system("pause");
+    return 0;
+}

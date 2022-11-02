@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    float y;
+    int x;
+    
+    printf("Digite respectivamente o numero de faltas e nota de um aluno: \n");
+    scanf("%d %f",&x,&y);
+
+    if(x <= 20){
+        if(y <= 10.0 && y >= 9.0){
+            printf("Conceito A\n");
+        }
+        if(y <= 8.9 && y >= 7.5){
+            printf("Conceito B\n");
+        }
+        if(y <= 7.4 && y >= 5.0){
+            printf("Conceito C\n");
+        }
+        if(y <= 4.0 && y >= 4.9){
+            printf("Conceito D\n");
+        }
+        if(y <= 3.9 && y >= 0.0){
+            printf("Conceito E\n");
+        }
+    }
+    if(x > 20){
+        if(y <= 10.0 && y >= 9.0){
+            printf("Conceito B\n");
+        }
+        if(y <= 7.5 && y >= 8.9){
+            printf("Conceito C\n");
+        }
+        if(y <= 7.4 && y >= 5.0){
+            printf("Conceito D\n");
+        }
+        if(y <= 4.9 && y >= 4.0){
+            printf("Conceito E\n");
+        }
+        if(y <= 3.9 && y >= 0.0){
+            printf("Conceito F\n");
+        }
+    }
+
+    system("pause");
+    return 0;
+}

@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int x;
+    float y,z;
+    printf("Escolha a opção:\n1- Soma de 2 números.\n");
+    printf("2- Diferença entre 2 números (maior pelo menor).\n");
+    printf("3- Produto entre 2 números.\n");
+    printf("4- Divisão entre 2 números (o denominador não pode ser zero).\n");
+    scanf("%d",&x);
+    switch(x){
+        case 1:
+        printf("Digite dois valores: \n");
+        scanf("%f %f",&y,&z);
+        y = y + z;
+        printf("Soma entre eles: %.2f\n",y);
+        break;
+        case 2:
+        printf("Digite dois valores: \n");
+        scanf("%f %f",&y,&z);
+        if(y >= z){
+            y = y - z;
+            printf("Diferença entre os valores: %.2f\n",y);
+        }
+        if(y < z){
+            z = z - y;
+            printf("Diferença entre os valores: %.2f\n",z);
+        }
+        break;
+        case 3:
+        printf("Digite dois valores: \n");
+        scanf("%f %f",&y,&z);
+        y = y * z;
+        printf("Produto entre eles: %.2f\n",y);
+        break;
+        case 4:
+        printf("Digite dois valores: \n");
+        scanf("%f %f",&y,&z);
+        if(z == 0){
+            printf("Divisor nao pode ser nulo");
+            system("pause");
+            return 0;
+        }else{
+            y = y / z;
+            printf("Divisao entre eles: %.2f\n",y);
+            break;
+        }
+    }
+    system("pause");
+    return 0;
+}
