@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+    int i = 0;
+    float x = 1.5, y = 1.1;
+
+    do{
+        x = x + 0.02;
+        y = y + 0.03;
+        i = i + 1;
+    }while(x >= y);
+    printf("Ze ultrapassou a altura de Chico em %d anos\n",i);
+    system("pause");
+    return 0;
+}

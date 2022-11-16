@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   
+    int w = 0, x, y = 0, z = 0, t = 0, u = 0, v = 0, b = 0;
+    printf("Digite o valor de saque: \n");
+    scanf("%d",&x);
+    if(x >= 100){
+        do{
+            w = w + 1;
+            x = x - 100;
+        }while(x >= 100);
+    }
+    if(x >= 50){
+        do{
+            y = y + 1;
+            x = x - 50;
+        }while(x >= 50);
+    }
+    if(x >= 20){
+        do{
+            z = z + 1;
+            x = x - 20;
+        }while(x >= 20);
+    }
+    if(x >= 10){
+        do{
+            t = t + 1;
+            x = x - 10;
+        }while(x >= 10);
+    }
+    if(x >= 5){
+        do{
+            u = u + 1;
+            x = x - 5;
+        }while(x >= 5);
+    }
+    if(x >= 2){
+        do{
+            v = v + 1;
+            x = x - 2;
+        }while(x >= 2);
+    }
+    if(x >= 1){
+        do{
+            b = b + 1;
+            x = x - 1;
+        }while(x >= 1);
+    }
+    printf("Notas correspondetes ao saque: \n");
+    printf("%d de 100 reais\n",w);
+    printf("%d de 50 reais\n",y);
+    printf("%d de 20 reais\n",z);
+    printf("%d de 10 reais\n",t);
+    printf("%d de 5 reais\n",u);
+    printf("%d de 2 reais\n",v);
+    printf("%d de 1 real\n",b);
+    system("pause");
+    return 0;
+}

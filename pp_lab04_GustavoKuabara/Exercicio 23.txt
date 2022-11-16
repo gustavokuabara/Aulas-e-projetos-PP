@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int n, i, j, z = 1;
+    printf("Digite um valor positivo inteiro que sera o numero de linhas: \n");
+    scanf("%d",&n);
+    for(i = 1; i <= n; i++){
+        for(j = 1; j <= i; j++){
+            if(z < 10){
+                printf("%d  ",z);
+            }else{
+            printf("%d ",z);
+            }
+            z = z + 1;
+        }
+        printf("\n");
+    }
+    system("pause");
+    return 0;
+}

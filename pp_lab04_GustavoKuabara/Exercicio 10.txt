@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    int i, x = 2, z = 0;
+    printf("Soma dos primeiros numeros pares(sem o zero): \n");
+    for(i = 0; i <= 49; i++){
+        z = z + x;
+        x = x + 2;
+    }
+    printf("%d\n",z);
+    system("pause");
+    return 0;
+}

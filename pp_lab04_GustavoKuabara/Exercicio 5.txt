@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    float i = 1.0, x, y = 0.0;
+    while(i <= 10){
+        printf("Digite um valor: \n");
+        scanf("%f",&x);
+        y = x + y;
+        i++;
+    }
+    printf("Soma : %.2f\n",y);
+    system("pause");
+    return 0;
+}

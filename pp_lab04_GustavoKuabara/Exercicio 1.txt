@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    int i, x;
+    printf("Os primeiros 5 multiplos de 3: \n");
+    for(i = 1; i <= 5; i++){
+        x = 3 * i;
+        printf("%d\n",x);
+    }
+    system("pause");
+    return 0;
+}

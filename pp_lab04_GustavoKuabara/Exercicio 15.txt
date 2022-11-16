@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main (){
+
+    int w, x, y;
+    float z;
+    do{
+        printf("Digite um valor: \n");
+        scanf("%d",&x);
+        if(x > 0){
+            w = x * x;
+            y = x * x * x;
+            z = sqrt(x);
+            printf("Quadrado: %d\n",w);
+            printf("Cubo: %d\n",y);
+            printf("Raiz quadrada: %f\n",z);
+        }
+    }while(x <= 0);
+    system("pause");
+    return 0;
+}

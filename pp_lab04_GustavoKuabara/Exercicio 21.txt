@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int i, j, x, y, t = 0, u = 0;
+    do{
+    printf("Digite dois numeros inteiros maiores que zero: \n");
+    scanf("%d %d",&x,&y);
+
+    }while(x < 0 || y < 0);
+
+    for(i = x; i <= y; i++){
+        t = 0;
+        for(j = 1; j <= i; j++){
+            if(i % j == 0){
+                t = t + 1;
+            }
+        }
+        if(t == 2){
+            u = u + 1;
+        }
+    }
+    printf("Quantidade de números primos de %d ate %d(contando os numeros digitados): %d\n",x, y, u);
+    system("pause");
+    return 0;
+}

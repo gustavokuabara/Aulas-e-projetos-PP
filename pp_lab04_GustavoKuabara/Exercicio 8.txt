@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    int i;
+    float x, y, z;
+    for(i = 1; i <= 10; i++){
+        printf("Digite um valor: \n");
+        scanf("%f",&x);
+        if(i == 1){
+            y = x;
+            z = x;
+        }else{
+            if(y > x){
+                y = x;
+            }
+            if(z < x){
+                z = x;
+            }
+        }
+    }
+    printf("Menor numero digitado: %f\n",y);
+    printf("Maior numero digitado: %f\n",z);
+    system("pause");
+    return 0;
+}

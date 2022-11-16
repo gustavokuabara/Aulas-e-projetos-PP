@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   
+    int i = 1, x, z = 1;
+    do{
+    printf("Digite um numero natural: ");
+    scanf("%d",&x);
+    }while(x <= 0);
+    printf("Todos os %d primeiros numeros naturais impares: \n",x);
+    while(i <= x){
+        printf("%d\n",z);
+        i++;
+        z = z + 2;
+    }
+    system("pause");
+    return 0;
+}

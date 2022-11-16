@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+    int x, i, z = 0;
+
+    printf("Digite um numero inteiro: \n");
+    scanf("%d",&x);
+    for(i = 1; i < x; i++){
+        if(x % i == 0){
+            z = z + i;
+        }
+    }
+    printf("Soma dos divisores desse numero: %d\n",z);
+    system("pause");
+    return 0;
+}

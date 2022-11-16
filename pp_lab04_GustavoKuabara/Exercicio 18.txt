@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+
+    int i;
+    float x = 2000, y;
+    x = x * 1.015;
+    for(i = 1997; i <= 2022; i++){
+        y = x * 2;
+        x = y;
+    }
+    printf("Salario atual do funcionario: %.2fR$\n",y);
+    system("pause");
+    return 0;
+}
