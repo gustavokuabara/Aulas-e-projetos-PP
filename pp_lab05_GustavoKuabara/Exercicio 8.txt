@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+float hipotenusa(float a, float b);
+
+int main()
+{
+    float x, y, z;
+    printf("Digite os catetos de um triângulo retângulo: \n");
+    scanf("%f %f",&x,&y);
+    z = hipotenusa(x,y);
+    printf("Hipotenusa: %f\n",z);
+    system("pause");
+    return 0;
+}
+
+float hipotenusa(float a, float b)
+{
+   float c;
+   c = sqrt((a * a)+(b * b));
+   return c;
+}

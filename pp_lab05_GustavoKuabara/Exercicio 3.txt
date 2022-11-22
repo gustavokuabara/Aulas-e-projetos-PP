@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int verificacao(float a);
+
+int main()
+{
+    float x;
+    int z;
+    printf("Digite um numero: \n");
+    scanf("%f",&x);
+    z = verificacao(x);
+    if(z == 1){
+        printf("Numero positivo!\n");
+    }else if(z == -1){
+        printf("Numero negativo!\n");
+    }else{
+        printf("Numero neutro(0)\n");
+    }
+    system("pause");
+    return 0;
+}
+
+int verificacao(float a)
+{
+   if(a < 0){
+    return -1;
+   }else if(a > 0){
+    return 1;
+   }else{
+    return 0;
+   }
+}

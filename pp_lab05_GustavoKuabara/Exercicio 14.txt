@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void km_h(float a, float b);
+
+int main()
+{
+    float x, y, z;
+    do{
+    printf("Digite os kilometros percorridos e a quantidade de gasolina consumida: \n");
+    scanf("%f %f",&x,&y);
+    if(x < 0 || y < 0){
+        printf("Algum valor digitado eh invalido!\n");
+    }
+    }while(x < 0 || y < 0);
+    km_h(x,y);
+    system("pause");
+    return 0;
+}
+
+void km_h(float a, float b)
+{
+    float c;
+    c = a/b;
+    if(c < 8){
+        printf("Venda o carro!\n");
+    }else if(c >= 8 && c < 14){
+        printf("Economico!\n");
+    }else{
+        printf("Super economico!\n");
+    }
+}

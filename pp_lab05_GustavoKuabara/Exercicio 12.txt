@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int Soma(int a);
+
+int main()
+{
+    int x, y;
+    printf("Digite um numero inteiro positivo: \n");
+    scanf("%d", &x);
+    y = Soma(x);
+    printf("Soma: %d\n",y);
+    system("pause");
+    return 0;
+}
+
+int Soma(int a)
+{
+    int b, c = 0;
+    if (a < 0){
+        printf("Numero invalido\n");
+        return 0;  
+    }else{
+        for(b = 0; a > 0; c = a % 10){
+            c = a % 10;
+            b = b + c;
+            a = a / 10;
+        }
+    return b;
+    }
+}

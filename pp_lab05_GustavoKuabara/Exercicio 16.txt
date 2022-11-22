@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void desenha_linha(int a);
+
+
+int main()
+{
+    int x;
+    printf("Digite o numero de '=' que deseja ser mostrado: \n");
+    scanf("%d",&x);
+    desenha_linha(x);
+    system("pause");
+    return 0;
+}
+
+void desenha_linha(int a)
+{
+    int i;
+    for(i = 1; i <= a; i++){
+        printf("=");
+    }
+    printf("\n");
+}

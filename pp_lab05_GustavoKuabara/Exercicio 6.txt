@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int conversao_segundos(int a, int b, int c);
+
+int main()
+{
+    int x, y, z, u;
+    printf("Digite a hora, minutos e segundos respectivamente: \n");
+    scanf("%d %d %d",&x,&y,&z);
+    u = conversao_segundos(x,y,z);
+    printf("Horario convertido em segundos: %d\n",u);
+    system("pause");
+    return 0;
+}
+
+int conversao_segundos(int a, int b, int c)
+{
+   int d;
+   d = (a * 3600) + (b * 60) + c;
+   return d;
+}

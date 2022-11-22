@@ -1,0 +1,93 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void conversao_de_data(int a, int b, int c);
+
+int main()
+{
+    int x, y, z, i;
+    do{
+        i = 0;
+        printf("Digite uma data(Exemplo: 2 2 2010): \n");
+        scanf("%d %d %d",&x, &y ,&z);
+        if(y != 2){
+            if(y < 1 && y > 11){
+                printf("Data digitada invalida!\n");
+                i++;
+            }else if(y == 1 || y == 3 || y == 5 || y == 7 || y == 8 || y == 10 || y == 12){
+                if(x < 0 || x > 31){
+                    printf("Data digitada invalida!\n");
+                    i++;
+                }
+            }else{
+                if(x < 0 || x > 30){
+                    printf("Data digitada invalida!\n");
+                    i++;
+                }
+            }
+        }else{
+            if(z % 4 == 0){
+                if(x < 1 || x > 28){
+                    printf("Data digitada invalida!\n");
+                    i++;
+                }
+            }else{
+                if(x < 1 || x > 29){
+                    printf("Data digitada invalida!\n");
+                    i++;
+                }
+            }
+        }
+    }while(i != 0);
+    if(y < 10){
+        printf("Data digitada: %d/0%d/%d \n",x,y,z);
+    }else{
+        printf("Data digitada: %d/%d/%d \n",x,y,z);
+    }
+    printf("Conversao: ");
+    conversao_de_data(x,y,z);
+    system("pause");
+    return 0;
+}
+
+void conversao_de_data(int a, int b, int c)
+{
+    switch(b){
+        case 1:
+        printf("%d de janeiro de %d\n",a,c);
+        break;
+        case 2:
+        printf("%d de fevereiro de %d\n",a,c);
+        break;
+        case 3:
+        printf("%d de marco de %d\n",a,c);
+        break;
+        case 4:
+        printf("%d de abril de %d\n",a,c);
+        break;
+        case 5:
+        printf("%d de maio de %d\n",a,c);
+        break;
+        case 6:
+        printf("%d de junho de %d\n",a,c);
+        break;
+        case 7:
+        printf("%d de julho de %d\n",a,c);
+        break;
+        case 8:
+        printf("%d de agosto de %d\n",a,c);
+        break;
+        case 9:
+        printf("%d de setembro de %d\n",a,c);
+        break;
+        case 10:
+        printf("%d de outubro de %d\n",a,c);
+        break;
+        case 11:
+        printf("%d de novembro de %d\n",a,c);
+        break;
+        case 12:
+        printf("%d de dezembro de %d\n",a,c);
+        break;
+    }
+}

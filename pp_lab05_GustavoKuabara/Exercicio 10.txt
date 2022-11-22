@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float maior(float a, float b);
+
+int main()
+{
+    float x, y, z;
+    printf("Digite dois numeros: \n");
+    scanf("%f %f",&x,&y);
+    z = maior(x,y);
+    printf("Maior numero: %f\n",z);
+    system("pause");
+    return 0;
+}
+
+float maior(float a, float b)
+{
+   float c;
+   if(a > b){
+    c = a;
+   }else if(b > a){
+    c = b;
+   }else{
+    c = a;
+   }
+   return c;
+}

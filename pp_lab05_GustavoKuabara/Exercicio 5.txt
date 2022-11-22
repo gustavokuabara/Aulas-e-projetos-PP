@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float volume_esfera(float a);
+
+int main()
+{
+    float x, z;
+    printf("Digite o raio de uma esfera: \n");
+    scanf("%f",&x);
+    z = volume_esfera(x);
+    printf("Volume da esfera: %.4f\n",z);
+    system("pause");
+    return 0;
+}
+
+float volume_esfera(float a)
+{
+   float b;
+   b = (4/3) * 3.141592 * (a * a * a);
+   return b;
+}

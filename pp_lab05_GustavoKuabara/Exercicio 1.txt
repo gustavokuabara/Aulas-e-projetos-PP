@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int dobro(int a);
+
+int main()
+{
+    int x, z;
+    printf("Digite um numero inteiro: \n");
+    scanf("%d",&x);
+    z = dobro(x);
+    printf("Dobro do valor digitado: %d\n",z);
+    system("pause");
+    return 0;
+}
+
+int dobro(int a)
+{
+    a = a * 2;
+    return a;
+}

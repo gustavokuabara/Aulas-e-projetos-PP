@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float Operacoes(float a, float b, char sinal);
+
+int main()
+{
+    float x, y, z;
+    char op;
+    printf("Digite dois numeros: \n");
+    scanf("%f %f",&x,&y);
+    fflush(stdin);
+    do{
+        printf("Digite o sinal da operacao a ser feita(+,-,*,/): \n");
+        fflush(stdin);
+        scanf("%c",&op);
+    }while(op != '+' && op != '-' && op != '*' && op != '/');
+    z = Operacoes(x,y,op);
+    printf("Resultado: %f\n",z);
+    system("pause");
+    return 0;
+}
+
+float Operacoes(float a, float b,char sinal)
+{
+    float c;
+    if(sinal == '+'){
+        c = a + b;
+    }else if(sinal == '-'){
+        c = a - b;
+    }else if(sinal == '*'){
+        c = a * b;
+    }else if(sinal == '/'){
+        c = a / b;
+    }
+    return c;
+}

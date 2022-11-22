@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+float volume_cilindro(float a, float b);
+
+int main()
+{
+    float x, y, z;
+    printf("Digite a altura e raio de um cilindro circular: \n");
+    scanf("%f %f",&x,&y);
+    z = volume_cilindro(x,y);
+    printf("Volume do cilindro: %.2fu.v\n",z);
+    system("pause");
+    return 0;
+}
+
+float volume_cilindro(float a, float b)
+{
+   float c;
+   c = 3.141592 * (b * b) * a;
+   return c;
+}

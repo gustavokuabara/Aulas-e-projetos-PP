@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+float conversao_fahrenheit(float a);
+
+int main()
+{
+    float x, z;
+    printf("Digite uma temperatura em Celsius: \n");
+    scanf("%f",&x);
+    z = conversao_fahrenheit(x);
+    printf("Temperatura convertida em Fahrenheit: %.1f\n",z);
+    system("pause");
+    return 0;
+}
+
+float conversao_fahrenheit(float a)
+{
+   float b;
+   b = a * (9.0/5.0) + 32.0;
+   return b;
+}
