@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int i;
+    int A[6];
+    for (i = 0; i <= 5; i++){
+        printf ("Digite o valor na posicao %d: \n", i);
+        scanf ("%d", &A[i]);
+    }
+    printf("Ordem inversa dos valores digitados: \n");
+    for (i = 5; i >= 0; --i){
+        printf ("%d\n", A[i]);
+    }
+    system("pause");
+    return 0;
+}
+

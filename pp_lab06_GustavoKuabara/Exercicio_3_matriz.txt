@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x[4][4],i ,j, c = 0, v = 0, b;
+    for(i = 0; i<= 3; i++){
+        for(j = 0;j <= 3; j++){
+            printf("Digite um valor para linha %d coluna %d: \n",i, j);
+            scanf("%d",&x[i][j]);
+        }
+    }
+    b = x[0][0];
+    printf("Matriz: \n");
+    for(i = 0; i<= 3; i++){
+        for(j = 0;j <= 3; j++){
+            if(x[i][j] < 10){
+                printf("%d  ",x[i][j]);
+            }else{
+                printf("%d ",x[i][j]);
+            }
+            if(x[i][j] > b){
+                b = x[i][j];
+                c = i;
+                v = j;
+            }
+        }
+        printf("\n");
+    }
+    printf("Localizacao e valor do maior numero digitado: [%d][%d] = %d\n",c,v,b);
+    system("pause");
+    return 0;
+}

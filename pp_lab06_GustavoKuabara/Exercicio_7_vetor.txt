@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, j = 0, k = 0, x = 0, y = 0;
+    int A[6], B[6], C[6];
+    for(i = 0; i <= 5; i++){
+        printf("Digite um valor para posicao %d: \n",i);
+        scanf("%d",&A[i]);
+        if(A[i] % 2 == 0){
+            B[j] = A[i];
+            j++;
+            x = x + A[i];
+        }else{
+            C[k] = A[i];
+            k++;
+            y = y + A[i];
+        }
+    }
+    for(i = 0; i <= j - 1; i++){
+        printf("Valor par digitado: %d\n",B[i]);
+    }
+    printf("Soma dos valores pares: %d\n",x);
+    for(i = 0; i <= k - 1; i++){
+        printf("Valor impar digitado: %d\n",C[i]);
+    }
+    printf("Soma dos valores impares: %d\n",y);
+    system("pause");
+    return 0;
+}
+

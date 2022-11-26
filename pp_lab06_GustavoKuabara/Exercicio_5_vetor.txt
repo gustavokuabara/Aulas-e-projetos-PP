@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    int A[50];
+    for(i = 0; i <= 49; i++){
+        A[i] = (i + 5 * i) % (i + 1);
+    }
+    for(i = 0; i <= 49; i++){
+        printf("Valor na posicao %d: %d\n",i,A[i]);
+    }
+    system("pause");
+    return 0;
+}
+

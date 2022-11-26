@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int x, i;
+    int A[6];
+    A[0]= 1;
+    A[1]= 0;
+    A[2]= 5;
+    A[3]= -2;
+    A[4]= -5;
+    A[5]= 7;
+    x = A[0] + A[1] + A[5];
+    A[4]=100;
+    printf("%d\n",x);
+    
+    for(i = 0; i <= 5; i++){
+        printf("%d\n", A[i]);
+    }
+    
+    system("pause");
+    return 0;
+}
+
