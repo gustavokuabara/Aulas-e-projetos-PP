@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char sentenca[100];
+    int i, x = 0;
+    printf("Digite uma sentenca: \n");
+    fgets(sentenca,100,stdin);
+    for(i = 0; sentenca[i] != '\0'; i++){
+        printf("%c",sentenca[i]);
+    }
+    printf("\n");
+    system("pause");
+    return 0;
+}

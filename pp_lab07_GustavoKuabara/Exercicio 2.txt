@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char binario[100];
+    int i, x = 0;
+    printf("Digite uma sequencia de 0's e 1's: \n");
+    scanf("%s",&binario);
+    for(i = 0; binario[i] != '\0'; i++){
+        if(binario[i] == '1'){
+            x++;
+        }
+    }
+    printf("Numero de 1's que apareceram: %d\n",x);
+    system("pause");
+    return 0;
+}

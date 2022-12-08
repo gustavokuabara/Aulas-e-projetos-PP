@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char frase[100], junto[100];
+    int i, x = 0;
+    printf("Digite uma frase: \n");
+    fgets(frase,100,stdin);
+    for(i = 0; frase[i] != '\0'; i++){
+        if(frase[i] != ' '){
+            junto[x] = frase[i];
+            x++;
+        }
+    }
+    printf("Conversao apos a retirada de espaco: \n");
+    for(i = 0; junto[i] != '\0'; i++){
+        printf("%c",junto[i]);
+    }
+    printf("\n");
+    system("pause");
+    return 0;
+}
