@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct pessoa{
+    char nome[50];
+    int idade;
+    char endereco[50];
+};
+
+int main()
+{
+    struct pessoa x;
+    printf("Digite o nome da pessoa: \n");
+    fgets(x.nome,50,stdin);
+    fflush(stdin);
+    printf("Digite a idade da pessoa: \n");
+    scanf("%d",&x.idade);
+    fflush(stdin);
+    printf("Digite o endereco da pessoa: \n");
+    fgets(x.endereco,50,stdin);
+    system("pause");
+    return 0;
+}

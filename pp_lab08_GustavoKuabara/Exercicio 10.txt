@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct livros{
+    char titulo[31];
+    char autor[16];
+    int ano;
+};
+
+int main()
+{
+    struct livros liv[5];
+    int i, j, k;
+    char titulo1[31];
+
+    printf("--Entrada de Dados dos Livros--\n");
+    for(i = 0; i < 5; i++){
+        printf("--Digite o titulo do %d°livro: \n",i + 1);
+        fgets(liv[i].titulo,31,stdin);
+        fflush(stdin);
+        printf("Digite o autor do livro: \n");
+        fgets(liv[i].autor,16,stdin);
+        fflush(stdin);
+        printf("Digite o ano do livro: \n");
+        scanf("%d",&liv[i].ano);
+        fflush(stdin);
+    }
+    printf("-Digite o titulo do livro que deseja buscar: \n");
+    fgets(titulo1,31,stdin);
+
+    for(i = 0; i < 5; i++){
+        k = 0;
+        for(j = 0; liv[i].titulo[j] != '\0'; j++){
+            if(liv[i].titulo[j] != titulo1[j]){
+                k = 1;
+            }
+        }
+        if(k == 0){
+            printf("Titulo: ");
+            for(j = 0; liv[i].titulo[j] != '\0'; j++){
+                printf("%c",liv[i].titulo[j]);
+            }
+            printf("Autor: ");
+            for(j = 0; liv[i].autor[j] != '\0'; j++){
+                printf("%c",liv[i].autor[j]);
+            }
+            printf("Ano: %d\n",liv[i].ano);
+        }
+    }
+    system("pause");
+    return 0;
+}

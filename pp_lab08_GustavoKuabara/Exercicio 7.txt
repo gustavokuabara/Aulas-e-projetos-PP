@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+struct dados{
+    char nome[60];
+    char endereco[60];
+    int telefone;
+};
+
+int main()
+{
+    struct dados d[5];
+    struct dados t;
+    int i, j, k;
+
+    
+    for(i = 0; i < 5; i++){
+        printf("Digite o nome de uma pessoa: \n");
+        fgets(d[i].nome,60,stdin);
+        fflush(stdin);
+        printf("Digite seu endereco: \n");
+        fgets(d[i].endereco,60,stdin);
+        fflush(stdin);
+        printf("Digite seu telefone: \n");
+        scanf("%d",&d[i].telefone);
+        fflush(stdin);
+    }
+    
+    do{
+    k = 0;
+        for(int x = 1;x < 5; ++x){
+            if(d[x].nome[0] < d[x-1].nome[0]){
+                t = d[x];
+                d[x] = d[x-1];
+                d[x-1] = t;
+                k = 1;
+            }
+        }
+    }while(k!=0);
+
+    printf("Ordem alfabetica: \n");
+    for(i = 0; i < 5; i++){
+        for(j = 0; d[i].nome[j] != '\0'; j++){
+            printf("%c",d[i].nome[j]);
+        }
+        printf("\n");
+    }
+    system("pause");
+    return 0;
+}

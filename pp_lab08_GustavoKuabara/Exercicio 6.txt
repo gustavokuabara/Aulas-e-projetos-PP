@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+struct funcionario{
+    char nome[60];
+    int idade;
+    char sexo;
+    int cpf;
+    //referente a data de nascimento;
+    int dia, mes, ano;
+    int codigo_do_setor;
+    char cargo[30];
+    float salario;
+};
+
+int main()
+{
+    struct funcionario fun;
+    int i;
+    printf("--Entrada de dados de um funcionario: \n");
+    printf("Nome: \n");
+    fgets(fun.nome,60,stdin);
+    fflush(stdin);
+    printf("Idade: \n");
+    scanf("%d",&fun.idade);
+    fflush(stdin);
+    do{
+    printf("Sexo(M/F): \n");
+    scanf("%c",&fun.sexo);
+    fflush(stdin);
+    }while(fun.sexo != 'M' && fun.sexo != 'F');
+    printf("CPF: \n");
+    scanf("%d",&fun.cpf);
+    printf("Data de nascimento(dia/mes/ano): ");
+    scanf("%d %d %d",&fun.dia,&fun.mes,&fun.ano);
+    do{
+        printf("Codigo do setor (0-99): \n");
+        scanf("%d",&fun.codigo_do_setor);
+    }while(fun.codigo_do_setor < 0 || fun.codigo_do_setor > 99);
+    fflush(stdin);
+    printf("Cargo: \n");
+    fgets(fun.cargo,30,stdin);
+    fflush(stdin);
+    printf("Salario: \n");
+    scanf("%f",&fun.salario);
+
+    printf("---Saida---\n");
+    for(i = 0; fun.nome[i] != '\0'; i++){
+        printf("%c",fun.nome[i]);
+    }
+    printf("Idade: %d\n",fun.idade);
+    printf("Sexo: %c\n",fun.sexo);
+    printf("CPF: %d\n",fun.cpf);
+    printf("Data de nascimento: %d/%d/%d\n",fun.dia,fun.mes,fun.ano);
+    printf("Codigo do setor: %d\n",fun.codigo_do_setor);
+    printf("Cargo: ");
+    for(i = 0; fun.cargo[i] != '\0'; i++){
+        printf("%c",fun.cargo[i]);
+    }
+    printf("Salario: %.2f\n",fun.salario);
+    system("pause");
+    return 0;
+}

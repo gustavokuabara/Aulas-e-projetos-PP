@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct ingrediente{
+    char nome1[16];
+    int quant1;
+};
+
+struct receita{
+    char nome2[26];
+    int quant2;
+    struct ingrediente ing[26];
+}; 
+
+int main()
+{
+    struct receita r[5];
+    int i, j, k[5], l, m;
+    char nome3[26];
+
+    printf("--Receita--\n");
+    for(i < 0; i < 5; i++){
+        printf("Digite o nome da %d°receita: \n",i + 1);
+        fgets(r[i].nome2,26,stdin);
+        fflush(stdin);
+        printf("Digite o numero de ingredientes da receita: \n");
+        scanf("%d",&r[i].quant2);
+        fflush(stdin);
+        k[i] = r[i].quant2;
+    }
+    for(i = 0; i < 5; i++){
+        for(j = 0; j < k[i]; j++){
+            printf("Digite o nome do %d°ingrediente da %d°receita: \n",j + 1,i + 1);
+            fgets(r[i].ing[j].nome1,16,stdin);
+            fflush(stdin);
+            printf("Digite a quantidade do ingrediente: \n");
+            scanf("%d",&r[i].ing[j].quant1);
+            fflush(stdin);
+        }
+    }
+    
+    do{
+        printf("Digite o nome da receita: \n");
+        fgets(nome3,26,stdin);
+        fflush(stdin);
+        for(i = 0; i < 5; i++){
+            l = 0;
+            for(j = 0; nome3[j] != '\0'; j++){
+                if(nome3[j] != r[i].nome2[j]){
+                    l = 1;
+                }
+            }
+            if(l == 0){
+                printf("-Ingredientes da receita: \n");
+                for(j = 0; j < k[i]; j++){
+                    for(m = 0; r[i].ing[j].nome1[m] != '\0'; m++){
+                        printf("%c",r[i].ing[j].nome1[m]);
+                    }
+                } 
+            }
+        }
+    }while(nome3[0] != ' ');
+    system("pause");
+    return 0;
+}

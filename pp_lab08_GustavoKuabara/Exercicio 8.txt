@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+/*fiz esse apontamento da string utilizando ponteiro porque outros metodos
+nao estavam funcionando*/
+struct carta{
+    char *naipe;
+    char *valor;
+};
+
+int main()
+{
+    struct carta c[6];
+    int i, j, k;
+
+    srand(time(NULL));
+    for(i = 0; i < 6; i++){
+        j = rand() % 3;
+        switch(j){
+            case 0:
+            c[i].naipe = "Copas";
+            break;
+            case 1:
+            c[i].naipe = "Espadas";
+            break;
+            case 2:
+            c[i].naipe = "Ouro";
+            break;
+            case 3:
+            c[i].naipe = "Paus";
+            break;
+        }
+        k = rand() % 13;
+        switch(k){
+            case 0:
+            c[i].valor = "As";
+            break;
+            case 1:
+            c[i].valor = "1";
+            break;
+            case 2:
+            c[i].valor = "2";
+            break;
+            case 3:
+            c[i].valor = "3";
+            break;
+            case 4:
+            c[i].valor = "4";
+            break;
+            case 5:
+            c[i].valor = "5";
+            break;
+            case 6:
+            c[i].valor = "6";
+            break;
+            case 7:
+            c[i].valor = "7";
+            break;
+            case 8:
+            c[i].valor = "8";
+            break;
+            case 9:
+            c[i].valor = "9";
+            break;
+            case 10:
+            c[i].valor = "10";
+            break;
+            case 11:
+            c[i].valor = "Valete";
+            break;
+            case 12:
+            c[i].valor = "Dama";
+            break;
+            case 13:
+            c[i].valor = "Rei";
+            break;
+        }
+        fflush(stdin);
+    }
+    printf("Cartas do jogador 1: \n");
+    for(i = 0; i < 3; i++){
+        printf("%d° carta: \n",i + 1);
+        for(j = 0; c[i].naipe[j] != '\0'; j++){
+            printf("%c",c[i].naipe[j]);
+        }
+        printf("\n");
+        for(j = 0; c[i].valor[j] != '\0'; j++){
+            printf("%c",c[i].valor[j]);
+        }
+        printf("\n");
+    }
+    printf("Cartas do jogador 2: \n");
+    for(i = 3; i < 6; i++){
+        printf("%d° carta: \n",i - 2);
+        for(j = 0; c[i].naipe[j] != '\0'; j++){
+            printf("%c",c[i].naipe[j]);
+        }
+        printf("\n");
+        for(j = 0; c[i].valor[j] != '\0'; j++){
+            printf("%c",c[i].valor[j]);
+        }
+        printf("\n");
+    }
+    system("pause");
+    return 0;
+}

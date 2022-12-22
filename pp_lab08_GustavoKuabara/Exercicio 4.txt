@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct pessoa{
+    char nome[50];
+    int numero_de_matricula;
+    float p1, p2, p3;
+};
+
+int main()
+{
+    struct pessoa x[5];
+    int i, m, n, o, p;
+    float j, k, l;
+    printf("---Dados de cinco alunos---\n");
+    for(i = 0; i < 5; i++){
+        printf("Nome do aluno: \n");
+        fgets(x[i].nome,50,stdin);
+        fflush(stdin);
+        printf("1-Digite o numero de matricula do aluno: \n");
+        scanf("%d",&x[i].numero_de_matricula);
+        fflush(stdin);
+        printf("2-Digite a nota da primeira prova: \n");
+        scanf("%f",&x[i].p1);
+        printf("3-Digite a nota da segunda prova: \n");
+        scanf("%f",&x[i].p2);
+        printf("4-Digite a nota da terceira prova: \n");
+        scanf("%f",&x[i].p3);
+        fflush(stdin);
+    }
+    j = x[0].p1;
+    k = x[0].p1 + x[0].p2 + x[0].p3;
+    l = x[0].p1 + x[0].p2 + x[0].p3;
+    for(i = 1; i < 5; i++){
+        if(x[i].p1 > j){
+            j = x[i].p1;
+            m = i;
+        }
+        if(x[i].p1 + x[i].p2 + x[i].p3 > k){
+            k = x[i].p1 + x[i].p2 + x[i].p3;
+            n = i;
+        }
+        if(x[i].p1 + x[i].p2 + x[i].p3 < l){
+            l = x[i].p1 + x[i].p2 + x[i].p3;
+            o = i;
+        }
+    }
+    printf("Aluno com a maior nota na primeira prova: ");
+    for(i = 0; x[m].nome[i] != '\0'; i++){
+        printf("%c",x[m].nome[i]);
+    }
+    printf("\n");
+    printf("Aluno com a maior media: ");
+    for(i = 0; x[n].nome[i] != '\0'; i++){
+        printf("%c",x[n].nome[i]);
+    }
+    printf("\n");
+    printf("Aluno com a menor media: ");
+    for(i = 0; x[o].nome[i] != '\0'; i++){
+        printf("%c",x[o].nome[i]);
+    }
+    printf("\n---Situacao dos alunos---\n");
+    for(i = 0; i < 5; i++){
+        if((x[i].p1 + x[i].p2 + x[i].p3)/3 < 6){
+            printf("Reprovado: ");
+            for(p = 0; x[i].nome[p] != '\0'; p++){
+                printf("%c",x[i].nome[p]);
+            }
+            printf("\n");
+        }else{
+            printf("Aprovado: ");
+            for(p = 0; x[i].nome[p] != '\0'; p++){
+                printf("%c",x[i].nome[p]);
+            }
+            printf("\n");
+        }
+    }
+    printf("\n");
+    system("pause");
+    return 0;
+}

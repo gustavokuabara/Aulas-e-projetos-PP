@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct carros{
+    char marca[16];
+    int ano;
+    float preco;
+};
+
+int main()
+{
+    struct carros vrumvrum[5];
+    int i, j, p;
+
+    printf("--Entrada de Dados dos Carros--\n");
+    for(i = 0; i < 5; i++){
+        printf("--Digite a marca do %d°carro: \n",i + 1);
+        fgets(vrumvrum[i].marca,16,stdin);
+        fflush(stdin);
+        printf("Digite o ano do carro: \n");
+        scanf("%d",&vrumvrum[i].ano);
+        fflush(stdin);
+        printf("Digite o preco do carro: \n");
+        scanf("%f",&vrumvrum[i].preco);
+        fflush(stdin);
+    }
+
+    do{
+        printf("Digite um preco: \n");
+        scanf("%f",&p);
+        for(i = 0; i < 5; i++){
+            if(vrumvrum[i].preco < p){
+                for(j = 0;vrumvrum[i].marca[j] != '\0'; j++){
+                    printf("%c",vrumvrum[i].marca[j]);
+                }
+                printf("Ano: %d\n",vrumvrum[i].ano);
+                printf("Preco : %.2f\n",vrumvrum[i].preco);
+            }
+        }
+    }while(p != 0);
+    system("pause");
+    return 0;
+}

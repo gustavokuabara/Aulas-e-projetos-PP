@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct pessoa{
+    char nome[50];
+    int numero_de_matricula;
+    char curso[50];
+};
+
+int main()
+{
+    struct pessoa x[5];
+    int i;
+    for(i = 0; i < 5; i++){
+        printf("Digite o nome do aluno: \n");
+        fgets(x[i].nome,50,stdin);
+        fflush(stdin);
+        printf("Digite o numero de matricula do aluno: \n");
+        scanf("%d",&x[i].numero_de_matricula);
+        fflush(stdin);
+        printf("Digite o curso do aluno: \n");
+        fgets(x[i].curso,50,stdin);
+        fflush(stdin);
+    }
+    system("pause");
+    return 0;
+}

@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct estoque{
+    int codigo;
+    char nome[16];
+    float preco;
+    int quant;
+};
+
+int main()
+{
+    struct estoque es[5];
+    int codigo1, quant1, i ,j;
+    
+    printf("--Dados do produto--\n");
+    for(i < 0; i < 5; i++){
+        printf("Digite o codigo do produto: \n");
+        scanf("%d",&es[i].codigo);
+        fflush(stdin);
+        printf("Digite o nome do produto: \n");
+        fgets(es[i].nome,16,stdin);
+        fflush(stdin);
+        printf("Digite o preco do produto: \n");
+        scanf("%f",&es[i].preco);
+        fflush(stdin);
+        printf("Digite a quantidade do produto: \n");
+        scanf("%d",&es[i].quant);
+        fflush(stdin);
+    }
+    do{
+        printf("Digite o código do produto e a quantidade que deseja comprar: \n");
+        scanf("%d %d",&codigo1,&quant1);
+        fflush(stdin);
+        for(i = 0; i < 5; i++){
+            if(es[i].codigo == codigo1){
+                if(es[i].quant >= quant1){
+                    printf("Pedido feito!\n");
+                    es[i].quant -= quant1;
+                    printf("Produto: ");
+                    for(j = 0; es[i].nome[j] != '\0'; j++){
+                        printf("%c",es[i].nome[j]);
+                    }
+                    printf("Codigo: %d\n",codigo1);
+                    printf("Preco: %.2f\n",quant1 * es[i].preco);
+                    printf("Quantidade: %d\n",quant1);
+                }else{
+                    printf("Estoque insuficiente, pedido cancelado!\n");
+                }
+            }
+        }
+    }while(codigo1 != 0);
+    system("pause");
+    return 0;
+}
