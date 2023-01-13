@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    float y;
+    char z;
+    int *ponteiroint;
+    float *ponteirofloat;
+    char *ponteirochar;
+    
+    printf("Digite um valor inteiro: ");
+    scanf("%d", &x);
+    printf("Digite um valor valor real: ");
+    scanf("%f", &y);
+    printf("Digite um char: ");
+    scanf(" %c", &z);
+    
+    ponteiroint = &x;
+    ponteirofloat = &y;
+    ponteirochar = &z;
+    
+    printf("Inteiro: %d\n", *ponteiroint);
+    printf("Real: %f\n", *ponteirofloat);
+    printf("Char: %c\n", *ponteirochar);
+    return 0;
+}

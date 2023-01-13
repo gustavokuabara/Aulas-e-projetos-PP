@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+void trocarvalor(int *a, int *b);
+
+void trocarvalor(int *a, int *b){
+    int p;
+
+    p = *b;
+    *b = *a;
+    *a = p;
+    return;
+}
+
+int main()
+{
+    int x, y;
+    
+    printf("Digite dois valores inteiros: ");
+    scanf("%d %d", &x, &y);
+    trocarvalor(&x,&y);
+    printf("Valores invertidos: x = %d, y = %d\n", x, y);
+    system("pause");
+    return 0;
+}

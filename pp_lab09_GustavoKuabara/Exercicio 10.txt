@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, array[5];
+    int *p;
+
+    printf("Digite 5 valores inteiros: ");
+    for(i = 0; i < 5; i++){
+        scanf("%d",&array[i]);
+    }
+    printf("Valores dobrados: \n");
+    p = &array[0];
+    printf("%d ",*p * 2);
+    p = &array[0] + 1;
+    printf("%d ",*p * 2);
+    p = &array[0] + 2;
+    printf("%d ",*p * 2);
+    p = &array[0] + 3;
+    printf("%d ",*p * 2);
+    p = &array[0] + 4;
+    printf("%d ",*p * 2);
+    printf("\n");
+    system("pause");
+    return 0;
+}

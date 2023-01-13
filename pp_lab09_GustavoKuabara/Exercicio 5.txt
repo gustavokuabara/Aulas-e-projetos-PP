@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+void trocarvalor(int *a, int *b);
+
+void trocarvalor(int *a, int *b){
+    int p;
+
+    if(*a < *b){
+        p = *a;
+        *a = *b;
+        *b = p;
+    }
+    return;
+}
+
+int main()
+{
+    int x, y;
+    
+    printf("Digite dois valores inteiros: ");
+    scanf("%d %d", &x, &y);
+    trocarvalor(&x,&y);
+    printf("Maior e menor valor: %d,%d\n", x, y);
+    system("pause");
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int array[10], i, x;
+    
+    printf("Digite um numero: \n");
+    scanf("%d",&x);
+    printf("Vetor preenchido com o numero digitado: \n");
+    for(i = 0; i < 10; i++){
+        *(array + i) = x;
+        if(i != 9){
+            printf("%d/",*(array + i));  
+        }else if(i = 9){
+            printf("%d\n",*(array + i));
+        }
+    }
+    system("pause");
+    return 0;
+}

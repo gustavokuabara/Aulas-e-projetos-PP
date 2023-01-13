@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float array[10];
+    int i;
+
+    printf("Digite 10 valores reais: ");
+    for(i = 0; i < 10; i++){
+        scanf("%f",&array[i]);
+    }
+    for(i = 0; i < 10; i++){
+        printf("Endereco da posicao %d: %d\n",i,&array[i]);
+    }
+    system("pause");
+    return 0;
+}

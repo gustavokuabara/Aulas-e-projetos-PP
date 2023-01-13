@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void imprimir(int *v);
+
+void imprimir(int *v){
+    int j;
+
+    printf("Vetor: ");
+    for(j = 0; j < 10; j++){
+        printf("%d ",*(v + j));
+    }
+    printf("\n");
+}
+
+int main()
+{
+    int array[10], i, x;
+    
+    printf("Digite 10 valores inteiros: \n");
+    for(i = 0; i < 10; i++){
+        scanf("%d",&array[i]);
+    }
+    imprimir(&array[0]);
+    system("pause");
+    return 0;
+}
