@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char *vet;
+    int n, i, j;
+    printf("Digite o tamanho da string: \n");
+    scanf("%d",&n);
+    vet = (char *)malloc(sizeof(char)*n);
+    fflush(stdin);
+    printf("Digite o conteudo da string: \n");
+    fgets(vet,n,stdin);
+    fflush(stdin);
+    j = strlen(vet);
+    printf("String digitada sem as vogais: \n");
+    for(i = 0; i < j; i++){
+        if(vet[i] != 'a' && vet[i] != 'e' && vet[i] != 'i' && vet[i] != 'o' && vet[i] != 'u'){
+            printf("%c",*(vet + i));
+        }
+    }
+    printf("\n");
+    free(vet);
+    vet = NULL;
+    system("pause");
+    return 0;
+}

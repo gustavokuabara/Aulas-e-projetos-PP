@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int i, j;
+  float **matriz;
+  int linha, coluna;
+  printf("Digite o numero de linhas e colunas em ordem que tera sua matriz: \n");
+  scanf("%d %d",&linha,&coluna);
+  matriz = malloc(sizeof(float)*linha);
+  for(i = 0; i < linha; i++){
+    matriz[i] = malloc(sizeof(float)*coluna);
+  }
+  printf("Digite os valores reais para cada espaco da matriz: \n");
+  for(i = 0;i < linha; i++){
+    for(j = 0; j < coluna; j++){
+      printf("%d°linha, %d°coluna : \n",i,j);
+      scanf("%f",&matriz[i][j]);
+    }
+  }
+  for(i = 0;i < linha; i++){
+    for(j = 0; j < coluna; j++){
+      if(matriz[i][j] >= 10){
+        if(matriz[i][j] >= 100){
+          printf("%f ",matriz[i][j]);
+        }else{
+          printf("%f  ",matriz[i][j]);
+        }
+      }else{
+        printf("%f   ",matriz[i][j]);
+      }
+    }
+    printf("\n");
+  }
+  for (i=0; i < linha; i++){
+    free(matriz[i]);
+  }
+  matriz = NULL;
+  system("pause");
+  return 0;
+}

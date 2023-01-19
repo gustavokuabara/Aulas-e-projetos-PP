@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Produto{
+  char nome[30];
+  int codigo;
+  float preco;
+};
+
+int main()
+{
+  char *vet;
+  int **matriz1;
+  int i, j;
+  struct Produto *p;
+  char **matriz2;
+  vet = malloc(1024);
+  matriz1 = malloc(sizeof(int)*10);
+  matriz2 = malloc(sizeof(char)*100);
+  p = malloc(sizeof(struct Produto)*50);
+  for(i = 0; i < 10; i++){
+    matriz1[i] = malloc(sizeof(int)*10);
+  }
+  for(i = 0; i < 100; i++){
+    matriz2[i] = malloc(sizeof(char)*80);
+  }
+  for(i = 0; i < 10; i++){
+    free(matriz1[i]);
+  }
+  free(matriz1);
+  for(i = 0; i < 100; i++){
+    free(matriz2[i]);
+  }
+  free(matriz2);
+  system("pause");
+  return 0;
+}

@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int *vet;
+    int n, i, j,op;
+    printf("Digite o tamanho da memoria: \n");
+    scanf("%d",&n);
+    vet = (int *)malloc(sizeof(int)*n);
+    fflush(stdin);
+    do{
+        printf("Digite o que deseja fazer: \n1-Adicionar valor em um local da memoria\n2-Consultar o valor em um local da memoris\n3-Sair\n");
+        scanf("%d",&op);
+        fflush(stdin);
+        switch(op){
+        case 1:
+            printf("Digite a posicao da memoria que deseje mudar: \n");
+            scanf("%d",&j);
+            fflush(stdin);
+            printf("Digite o novo valor: \n");
+            scanf("%d",&vet[j]);
+            fflush(stdin);
+            break;
+        case 2:
+            printf("Digite a posicao da memoria que deseje consultar: \n");
+            scanf("%d",&j);
+            fflush(stdin);
+            printf("Valor na posicao %d°: %d\n",j,vet[j]);
+            break;
+        }
+    }while(op != 3);
+    printf("\n");
+    free(vet);
+    vet = NULL;
+    system("pause");
+    return 0;
+}

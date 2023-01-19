@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *vet, n, i;
+    printf("Digite o tamanho da vetor: \n");
+    scanf("%d",&n);
+    vet = (int *)malloc(sizeof(int)*n);
+    printf("Digite os valores da vetor: \n");
+    for(i = 0; i < n; i++){
+        scanf("%d",&vet[i]);
+    }
+    printf("Valores digitados: \n");
+    for(i = 0; i < n; i++){
+        if(i == n - 1){
+            printf("%d\n",*(vet + i));
+        }else{
+            printf("%d/",*(vet + i));
+        }
+    }
+    free(vet);
+    vet = NULL;
+    system("pause");
+    return 0;
+}

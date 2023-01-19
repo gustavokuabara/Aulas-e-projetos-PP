@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int i, j;
+  int **matriz, **matriz2;
+  int n, m;
+  printf("Digite o numero de linhas e colunas em ordem que tera sua matriz: \n");
+  scanf("%d %d",&n,&m);
+  matriz = malloc(sizeof(int)*n);
+  for(i = 0; i < n; i++){
+    matriz[i] = malloc(sizeof(int)*m);
+  }
+  matriz2 = malloc(sizeof(int)*m);
+  for(i = 0; i < m; i++){
+    matriz2[i] = malloc(sizeof(int)*n);
+  }
+  printf("Digite os valores inteiros para cada espaco da matriz: \n");
+  for(i = 0;i < n; i++){
+    for(j = 0; j < m; j++){
+      printf("%d°linha, %d°coluna : \n",i,j);
+      scanf("%d",&matriz[i][j]);
+    }
+  }
+  for(i = 0;i < n; i++){
+    for(j = 0; j < m; j++){
+      matriz2[j][i] = matriz[i][j];
+    }
+  }
+  printf("-Matriz digitada: \n");
+  for(i = 0;i < n; i++){
+    for(j = 0; j < m; j++){
+      if(matriz[i][j] >= 10){
+        if(matriz[i][j] >= 100){
+          printf("%d ",matriz[i][j]);
+        }else{
+          printf("%d  ",matriz[i][j]);
+        }
+      }else{
+        printf("%d   ",matriz[i][j]);
+      }
+    }
+    printf("\n");
+  }
+  printf("Matriz transposta: \n");
+  for(i = 0;i < m; i++){
+    for(j = 0; j < n; j++){
+      if(matriz2[i][j] >= 10){
+        if(matriz2[i][j] >= 100){
+          printf("%d ",matriz2[i][j]);
+        }else{
+          printf("%d  ",matriz2[i][j]);
+        }
+      }else{
+        printf("%d   ",matriz2[i][j]);
+      }
+    }
+    printf("\n");
+  }
+  for (i=0; i < n; i++){
+    free(matriz[i]);
+  }
+  for (i=0; i < m; i++){
+    free(matriz2[i]);
+  }
+  matriz2 = NULL;
+  matriz = NULL;
+  system("pause");
+  return 0;
+}

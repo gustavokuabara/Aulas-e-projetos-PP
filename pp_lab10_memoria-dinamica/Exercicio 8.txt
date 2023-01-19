@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int *vet;
+    int n = 1500, i, j;
+    vet = (int *)calloc(n,sizeof(int));
+    fflush(stdin);
+    for(i = 0; i < n; i++){
+        if(vet[i] != 0){
+            j = 1;
+        }
+    }
+    if(j == 1){
+        printf("O vetor possui numeros diferentes de zero!\n");
+    }else{
+        printf("O vetor possui apenas zeros!\n");
+    }
+    for(i = 0; i < n; i++){
+        vet[i] = i;
+    }
+    printf("10 primeiros valores do vetor: \n");
+    for(i = 0;i < 10; i++){
+        if(i != 9){
+            printf("%d/",vet[i]);
+        }else{
+            printf("%d\n",vet[i]);
+        }
+    }
+    printf("10 ultimos valores do vetor: \n");
+    for(i = 1489;i < n; i++){
+        if(i != 1499){
+            printf("%d/",vet[i]);
+        }else{
+            printf("%d\n",vet[i]);
+        }
+    }
+    free(vet);
+    vet = NULL;
+    system("pause");
+    return 0;
+}

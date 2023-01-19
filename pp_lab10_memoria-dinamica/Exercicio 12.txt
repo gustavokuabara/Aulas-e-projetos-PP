@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Produtos{
+    int codigo, quantidade;
+    char nome[50];
+    float preco;
+};
+ 
+int main()
+{
+    int n, i, maiorpreco = 0, maiorquant = 0;
+    struct Produtos *prod;
+    printf("Digite a quantidade de produtos que deseja introduzir informacoes: \n");
+    scanf("%d",&n);
+    getchar();
+    prod = malloc(sizeof(struct Produtos)*n);
+    for(i = 0; i < n; i++){
+      printf("Digite o nome do %d°produto: \n",i + 1);
+      fgets(prod[i].nome,50,stdin);
+      fflush(stdin);
+      printf("Digite o codigo do produto: \n");
+      scanf("%d",&prod[i].codigo);
+      printf("Digite a quantidade do produto: \n");
+      scanf("%d",&prod[i].quantidade);
+      fflush(stdin);
+      printf("Digite o preco do produto: \n\n");
+      scanf("%f",&prod[i].preco);
+      fflush(stdin);
+    }
+    for(i = 1;i < n; i++){
+      if(prod[maiorpreco].preco < prod[i].preco){
+        maiorpreco = i;
+      }
+      if(prod[maiorquant].quantidade < prod[i].quantidade){
+        maiorquant = i;
+      }
+    }
+    printf("Produto com o maior preco: ");
+    for(i = 0;prod[maiorpreco].nome[i] != '\0';i++){
+      printf("%c",prod[maiorpreco].nome[i]);
+    }
+    printf("Produto com a maior quantidade: ");
+    for(i = 0;prod[maiorquant].nome[i] != '\0';i++){
+      printf("%c",prod[maiorquant].nome[i]);
+    }
+    printf("\n");
+    system("pause");
+    free(prod);
+    prod = NULL;
+    return 0;
+}
