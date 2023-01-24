@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void main(){
+  FILE *pp1;
+  FILE *pp2;
+  char cidade[40], maispopulosa[40];
+  int habitantes, populacao, i, j = 0, k, l;
+  pp1 = fopen("pplab1.txt","r");
+  while(feof(pp1) == 0){
+    i = 0;
+    l = 0;
+    while(l == 0){
+      fscanf(pp1,"%c",&cidade[i]);
+      if(cidade[i] == '|'){
+        cidade[i] = '\0';
+        l = 1;
+        i--;
+      }
+      i++;
+    }
+    fscanf(pp1," %d",&habitantes);
+    if(j > 0){
+      if(populacao < habitantes){
+        strcpy(maispopulosa,cidade);
+        populacao = habitantes;
+      }
+    }else{
+      strcpy(maispopulosa,cidade);
+      populacao = habitantes;
+    }
+    j++;
+  }
+  fclose(pp1);
+  pp2 = fopen("pplab2.txt","w");
+    for(i = 0; maispopulosa[i] != '\0';i++){
+      fprintf(pp2,"%c",maispopulosa[i]);
+    }
+    fprintf(pp2,"%d",populacao);
+  fclose(pp2);
+
+  system("pause");
+}
